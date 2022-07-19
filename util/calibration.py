@@ -4,8 +4,13 @@ from inout import *
 data_dir_path = os.path.join(os.path.abspath('.'), 'data')
 
 def world2image(path:str, cam_id:str='cam_0')->np.ndarray:
-    # (Such that a world point in the camera coordinate frame is given by p' = Rp + t) 
-    # (Such that a project point for a perfect pinhole camera with no distortion is u = fx* p'.x/p'.zworld point in the camera coordinate frame is given by p' = Rp + t) 
+    """
+    This function converts global positions to pixel coordinate.
+    Input: glo_pos path
+    Return: pixel coord np.array with shape (frame_num, targets_len, 2)
+    """
+    # a world point in the camera coordinate frame is given by p' = Rp + t) 
+    # a project point for a perfect pinhole camera with no distortion is u = fx* p'.x/p'.zworld point in the camera coordinate frame is given by p' = Rp + t) 
     calibration_file_path = os.path.join(data_dir_path, 'calibration.cal')
     cam_pars = read_calibration_file(calibration_file_path)
     glob_pos = read_global_pos(path=globalpos_file_path)
