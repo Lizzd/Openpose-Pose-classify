@@ -83,7 +83,7 @@ def read_global_pos(path:str)->np.ndarray:
     R_Foot	RightFoot
 
     input: file path
-    return: np.array with shape(frame_num, 12, 3)
+    return: np.array with shape(frame_num, 13, 3)
     """
 
     target_list = ['Head','Spine3', 'Hips', 'LeftArm', 'RightArm', 'LeftForeArm','RightForeArm', 'LeftUpLeg',\
