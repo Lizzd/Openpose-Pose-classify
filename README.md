@@ -63,8 +63,8 @@ A summary of the dataset used for input is:
  - 211200 individual images 
  - Accelerometer captures motion data at approximately 30 Hz
  - Training_split = 0.8
-   - Length X_train = 3474 * 32 frames * (18\times2+6 \times3)
-   - Length X_test = 869 * 32 frames * (18 \times2+6 \times3)
+   - Length X_train = 3474 * 32 frames * (18`×`2+6`×`3)
+   - Length X_test = 869 * 32 frames * (18`×`2+6`×`3)
    
    
    
