@@ -52,7 +52,7 @@ A single frame's input (where j refers to a joint) is stored as:
 For the following experiment, very little preprocessing has been done to the dataset.  
 The following steps were taken:
 - for 2D position data:  
-1. openpose run on individual frames, for each subject, action and view, outputting JSON of 18 joint x and y position keypoints and accuracies per frame
+1. Run Openpose.ipynb for each video to split video to frames and get the outputting JSON of 18 joint x and y position keypoints of each frame and their confidence score.
 2. JSONs converted into txt format, keeping only x and y positions of each frame, action being performed during frame, and order of frames. This is used to create a database of associated activity class number and corresponding series of joint 2D positions
 - for 3D transformation data:  
 1. Interpolate the accelerators data and downsample it to match the sample rate of camera frames.  
