@@ -2,7 +2,7 @@
 
 
 The code serves to manage the action standard in the home rehabilitation, and the current database already supports the classification task of realizing six different actions. The classification of human activities uses a 2D pose and a 3D transformation time series datasets and an LSTM RNN.  
-The 2D pose time seires dataset is transformed from videos, while the 3D transformation time series datasets is transformed from accelerators data.  
+The 2D pose time seires dataset is transformed from videos, while the 3D transformation time series datasets is transformed from accelerometers data.  
 The idea is to prove the concept that using both series of 2D pose and 3D transformation, rather than only using one of them, can produce an accurater estimation of the behaviour of a person.
 This is a step towards creating a method of classifying an human's current behaviour state and predicting it's likely next state, allowing for better self motion management in the home rehabilitation.  
 
@@ -11,9 +11,9 @@ This is a step towards creating a method of classifying an human's current behav
 The aims of this experiment are:
 
 - To transform the raw 2D videos into 2D position of 18 interested joints across a timeseries of frames. This serves to the following use of LSTM RNN model.    
-- To analyze the importance of the choosen 18 joints. This is based on the idea of adding IMU accelerators at joints that are much missing from the videos but are important to the results.  
+- To analyze the importance of the choosen 18 joints. This is based on the idea of adding IMU accelerometers at joints that are much missing from the videos but are important to the results.  
 - To determine if 2D pose together with 3D transformation time series has comparable accuracy to using only one of them for use in activity recognition. This is to verify joints importance analysis.  
-- To verify the concept for use in future works managing the action standard in the home rehabilitation using only few accelerator device and a single camera.
+- To verify the concept for use in future works managing the action standard in the home rehabilitation using only few accelerometer device and a single camera.
 
 
 
@@ -55,7 +55,7 @@ The following steps were taken:
 1. Run Openpose.ipynb for each video to split video to frames and get the outputting JSON of 18 joint x and y position keypoints of each frame and their confidence score.
 2. JSONs converted into txt format, keeping only x and y positions of each frame, action being performed during frame, and order of frames. This is used to create a database of associated activity class number and corresponding series of joint 2D positions
 - for 3D transformation data:  
-1. Interpolate the accelerators data and downsample it to match the sample rate of camera frames.  
+1. Interpolate the accelerometers data and downsample it to match the sample rate of camera frames.  
 
 
 A summary of the dataset used for input is:  
@@ -83,13 +83,13 @@ Run the code "ModelTraining.ipynb" to train and get result.
 
 ## Conclusion
 
-Final accuracy of 93.9% is pretty good, considering that the model using only camera dataset has accuracy of 91.5%, and the model using only IMU accelerators dataset has accuracy of 79.6%.
+Final accuracy of 93.9% is pretty good, considering that the model using only camera dataset has accuracy of 91.5%, and the model using only IMU accelerometers dataset has accuracy of 79.6%.
 
 The misclassification cases have signifficantly reduced in our model compared with the other two models. Noticeable confusion between activities of Clapping Hands and Boxing, and between Jumping Jacks and Waving Two Hands which is understandable.  
 
 
 
-Overall, this experiment validates the idea that 2D pose together with few IMU accelerators can be used for human activity recognition, and provides verification to continue onto management of the action standard in the home rehabilitation.
+Overall, this experiment validates the idea that 2D pose together with few IMU accelerometers can be used for human activity recognition, and provides verification to continue onto management of the action standard in the home rehabilitation.
  
 
    
@@ -100,10 +100,10 @@ Further research will be made into the use on more subtle activity classes: norm
 
 Inclusion of :
  - Collect videos for standard and not standard rehabilitation motions  
- - Collect the IMU accelerators data on more joints for standard and not standard rehabilitation motions  
- - Denoising the IMU accelerators data  
+ - Collect the IMU accelerometers data on more joints for standard and not standard rehabilitation motions  
+ - Denoising the IMU accelerometers data  
  - Train single model for special rehabilitation motions  
- - Analyze and evaluate the effect of accelerator placed on different joint for special rehabilitation motions  
+ - Analyze and evaluate the effect of accelerometers placed on different joint for special rehabilitation motions  
 
 
 
