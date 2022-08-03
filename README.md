@@ -85,7 +85,7 @@ Run the code "ModelTraining.ipynb" to train and get result.
 
 Final accuracy of 93.9% is pretty good, considering that the model using only camera dataset has accuracy of 91.5%, and the model using only IMU accelerators dataset has accuracy of 79.6%.
 
-The miisclassification cases have signifficantly reduced in our model compared with the other two models. Noticeable confusion between activities of Clapping Hands and Boxing, and between Jumping Jacks and Waving Two Hands which is understandable.  
+The misclassification cases have signifficantly reduced in our model compared with the other two models. Noticeable confusion between activities of Clapping Hands and Boxing, and between Jumping Jacks and Waving Two Hands which is understandable.  
 
 
 
