@@ -66,9 +66,46 @@ A summary of the dataset used for input is:
    - Length X_train = 3474 * 32 frames * (18*2+6*3)
    - Length X_test = 869 * 32 frames * (18*2+6*3)
    
+   
+   
+   
+## Analysis of camera data:  
+Run the code "lstm.ipynb" to visualize the data analysis.  
+
+
 
 
 ## Training and Results below:   
 Training took approximately 14 mins running on a single AMD Radeon(TM) Graphics for each among the 3 models, and was run for 100 epochs with a batch size of 4096.  
 
+Run the code "BerkeleyIMU.ipynb" to train and get result.
 
+
+## Conclusion
+
+Final accuracy of 93.9% is pretty good, considering that the model using only camera dataset has accuracy of 91.5%, and the model using only IMU accelerators dataset has accuracy of 79.6%.
+
+The miisclassification cases have signifficantly reduced in our model compared with the other two models. Noticeable confusion between activities of Clapping Hands and Boxing, and between Jumping Jacks and Waving Two Hands which is understandable.  
+
+
+
+Overall, this experiment validates the idea that 2D pose together with few IMU accelerators can be used for human activity recognition, and provides verification to continue onto management of the action standard in the home rehabilitation.
+ 
+
+   
+  
+
+## Future Works
+Further research will be made into the use on more subtle activity classes: normal versus abnormal behaviour, based on a baseline of normal motion.  
+
+Inclusion of :
+ - Collect videos for standard and not standard rehabilitation motions  
+ - Collect the IMU accelerators data on more joints for standard and not standard rehabilitation motions  
+ - Denoising the IMU accelerators data  
+ - Train single model for special rehabilitation motions  
+ - Analyze and evaluate the effect of accelerator placed on different joint for special rehabilitation motions  
+
+
+
+
+## 
