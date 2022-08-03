@@ -14,12 +14,11 @@ Only the output 2D poses of each frame have been included. The videos and output
 
 The data is in the following layout:
 
-HAR_pose_activities  
-&nbsp;&nbsp;└──databse  
-&nbsp;&nbsp;&nbsp;&nbsp;└──x_test.txt  
-&nbsp;&nbsp;&nbsp;&nbsp;└──x_train.txt  
-&nbsp;&nbsp;&nbsp;&nbsp;└──y_test.txt  
-&nbsp;&nbsp;&nbsp;&nbsp;└──y_traint.txt  
+data   
+&nbsp;&nbsp;└──x_test.txt  
+&nbsp;&nbsp;└──x_train.txt  
+&nbsp;&nbsp;└──y_test.txt  
+&nbsp;&nbsp;└──y_traint.txt  
 
 And format (for both test and train):
 
