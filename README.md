@@ -70,7 +70,7 @@ A summary of the dataset used for input is:
    
    
 ## Analysis of camera data:  
-Run the code "lstm.ipynb" to visualize the data analysis.  
+Run the code "DataAnalysis.ipynb" to visualize the data analysis.  
 
 
 
@@ -78,7 +78,7 @@ Run the code "lstm.ipynb" to visualize the data analysis.
 ## Training and Results below:   
 Training took approximately 14 mins running on a single AMD Radeon(TM) Graphics for each among the 3 models, and was run for 100 epochs with a batch size of 4096.  
 
-Run the code "BerkeleyIMU.ipynb" to train and get result.
+Run the code "ModelTraining.ipynb" to train and get result.
 
 
 ## Conclusion
