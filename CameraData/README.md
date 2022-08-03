@@ -1,4 +1,4 @@
-# RNN for Human Activity Recognition - 2D Pose Input Dataset
+# 2D Pose Input Dataset
 The dataset consists of 2D pose estimations, made using the software OpenPose (https://github.com/CMU-Perceptual-Computing-Lab/openpose's) on a subset of the Berkeley Multimodal Human Action Database (MHAD) dataset http://tele-immersion.citris-uc.org/berkeley_mhad.
 
 This dataset is comprised of 12 subjects doing the following 6 actions for 5 repetitions, filmed from 4 angles, repeated 5 times each.
@@ -10,8 +10,7 @@ WAVING_1HAND,
 CLAPPING_HANDS.
 
 Only the output 2D poses of each frame have been included. The videos and output frames have not been included in the online dataset due to size (>50GB).
-If you would like to download the videos directly from the Berkley site, the videos used were actions 1,2,4,5,6,7 for all repetitions, recordings and subjects.
-I will look at hosting the 2D pose image outputs in an accessible location soon.
+
 
 The data is in the following layout:
 
@@ -38,7 +37,7 @@ Input:
 Output:
 
 	[	[class_id] (frame0)  
-		[class_id] (frame0)  
+		[class_id] (frame1)  
 		...  
 		[class_id] (frameN)  
 	]
